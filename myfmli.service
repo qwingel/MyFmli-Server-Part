@@ -1,0 +1,14 @@
+[Unit]
+Description=MyFMLI
+After=network.target
+
+[Service]
+User=qwingel
+Group=qwingel
+
+WorkingDirectory=/home/qwingel/MyFmli-Server-Part/
+Environment="PYTHONPATH=/home/qwingel/MyFmli-Server-Partt/"
+ExecStart=/home/qwingel/MyFmli-Server-Part/.venv/bin/python /home/qwingel/MyFmli-Server-Part/main.py
+
+[Install]
+WantedBy=multi-user.target
